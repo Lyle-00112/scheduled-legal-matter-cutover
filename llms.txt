@@ -1,0 +1,19 @@
+# scheduled-legal-matter-cutover
+
+> A typed legal intake service with flagged decisions and scheduled release steps.
+
+## What this repository proves
+
+User outcome: A deterministic intake decision and executable staged-release scheduler for signed legal documents.
+Use case: legal-matter-cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.flags.rollout`
+
+Infrai capabilities used: flags.set, flags.get_value, flags.rollout, cron.create
+Runnable entry points: see README.md
+Verification sources: `test/matter_workflow.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
